@@ -1,7 +1,7 @@
 # golang parameters
 ARG GO_VERSION
 
-FROM ghcr.io/goreleaser/goreleaser-cross-base:v${GO_VERSION} AS osx-cross-base
+FROM ghcr.io/mlsmaycon/goreleaser-cross-base:v${GO_VERSION} AS osx-cross-base
 ENV OSX_CROSS_PATH=/osxcross
 ARG DEBIAN_FRONTEND=noninteractive
 
@@ -91,6 +91,7 @@ RUN \
         llvm-dev \
         uuid-dev \
         binutils-multiarch-dev \
+        libayatana-appindicator3-1 libgtk-3-dev libappindicator3-0.1-cil libayatana-appindicator3-dev \
  && apt -y autoremove \
  && apt-get clean \
  && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/* \
