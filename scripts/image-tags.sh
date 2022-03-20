@@ -6,7 +6,7 @@
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" >/dev/null 2>&1 && pwd)"
 
 function generate_tags {
-	hub="goreleaser/$1"
+	hub="mlsmaycon/$1"
 	ghcr=ghcr.io/$hub
 
 	tag=$(make tag)
