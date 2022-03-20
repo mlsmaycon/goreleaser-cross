@@ -90,9 +90,9 @@ jobs:
 #        env:
 #          COSIGN_KEY: ${{secrets.COSIGN_PRIVATE_KEY}}
 #          COSIGN_PASSWORD: ${{secrets.COSIGN_PASSWORD}}
-      - name: Generate changelog
-        run: make gen-changelog
-      - name: Release
-        uses: softprops/action-gh-release@v1
-        with:
-          body_path: changelog.md
+      # - name: Generate changelog
+      #   run: make gen-changelog
+      # - name: Release
+      #   uses: softprops/action-gh-release@v1
+      #   with:
+      #     body_path: changelog.md
