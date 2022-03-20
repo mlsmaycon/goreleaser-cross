@@ -47,6 +47,7 @@ RUN \
         patch \
         mercurial \
         musl-tools \
+        libayatana-appindicator3-1 libgtk-3-dev libappindicator3-0.1-cil libayatana-appindicator3-dev \
  && apt -y autoremove \
  && apt-get clean \
  && rm -rf /var/lib/apt/lists/* \
@@ -91,7 +92,6 @@ RUN \
         llvm-dev \
         uuid-dev \
         binutils-multiarch-dev \
-        libayatana-appindicator3-1 libgtk-3-dev libappindicator3-0.1-cil libayatana-appindicator3-dev \
  && apt -y autoremove \
  && apt-get clean \
  && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/* \
